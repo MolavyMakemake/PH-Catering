@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/checkout.css">
+    <link rel="stylesheet" href="style/text.css">
+    <link rel="stylesheet" href="style/common.css">
+</head>
+<body>
+    
+    <!---->
+    <!--HEADER-->
+    <div class="header">
+        <a href="./index.html" class="header-title"><h1>PH Catering</h1></a>
+        <img class="header-tab" id="expand-header" src="./images/extend.png" onclick="expand_header()"></img>
+        <img class="header-tab" id="retract-header" src="./images/return.png" onclick="retract_header()" style="visibility: hidden;"></img>
+        <div class="header-links">
+            <a href="./index.html">Hjem</a>
+            <a href="./om-oss.html">Om oss</a>
+        </div>
+    </div>
+    <!---->
+
+    <div class="form-container">
+        <form>
+            <div class="form-field">
+                <label for="order-name">Fulle navn:</label>
+                <input class="order-input" type="text" id="order-name" name="fname" placeholder="Navn">
+            </div>
+                
+            <div class="form-field">
+                <label for="order-pnumber">Tlf nummer:</label>
+                <input class="order-input" type="tel" id="order-pnumber" name="pnum" placeholder="+47">
+            </div>
+
+            <div class="form-field">
+                <label for="order-date">Dato</label>
+                <input type="date" id="order-date" name="date" style="margin-right: 10px;">
+            </div>
+
+            <div class="form-field">
+                <label for="order-date">Adresse:</label>
+                <input class="order-input" type="text" id="order-address" name="address" style="margin-right: 10px;">
+            </div>
+
+
+            <div class="form-field field-od">
+                <label for="order-details">Detaljer om din bestilling:</label><br>
+                <textarea class="order-input" id="order-details" cols="30" rows="4" name="details"></textarea>
+            </div>
+
+            <div class="order-list">
+                <div class="order">
+                    <p>Item 1</p>
+                    <p>140kr</p>
+                    <div class="order-vars">
+                        <input class="order-amount" type="number" name="porsjoner" min="1" step="1" value="1">
+                        <div class="remove-order"></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="order-total">
+                <p>Totalt</p>
+                <p id="order-total">kr 0</p>
+            </div>
+
+
+            <button type="button" id="order-button" onclick="send_mail()">Send mail</button>
+        </form>
+        <img src="images/party.jpg">
+    </div>
+
+    <script src="./scripts/menu-data.js"></script>
+    <script src="./scripts/checkout.js"></script>
+    <script src="./scripts/animations.js"></script>
+
+</body>
+</html>
