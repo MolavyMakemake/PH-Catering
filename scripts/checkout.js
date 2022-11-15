@@ -68,15 +68,24 @@ document.querySelectorAll(".order-amount").forEach(e => {
     e.addEventListener("change", update_price)
 })
 
+function set_all_counters(){
+    let n = Number(document.querySelector(".order-amount-master").value);
+    if (n == 0)
+        return;
+
+    document.querySelectorAll(".order-amount").forEach(e => e.value = n);
+
+    update_price();
+}
+
 function remove_item(e){
     let item = e.target.id;
     items[item].in_cart = false;
     localStorage.setItem("items", JSON.stringify(items));
 
-    e.path[3].remove();
+    e.originalEvent.path[3].remove();
 
-    total_price -= price(item);
-    document.querySelector("#order-total").innerHTML = "kr " + total_price;
+    update_price();
 }
 
 function send_mail(){
@@ -136,5 +145,8 @@ function send_mail(){
 
 
 document.querySelectorAll(".remove-order").forEach(e => {
-    e.addEventListener("click", remove_item)
+    $(e).on("touchstart mousedown", (e) => {
+        remove_item(e);
+        e.preventDefault();
+    })
 })

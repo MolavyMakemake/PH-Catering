@@ -45,7 +45,10 @@ function expand_catagory(e){
 
 create_menu();
 document.querySelectorAll(".menu-catagory").forEach(e => {
-    e.addEventListener("mousedown", expand_catagory)
+    $(e).on("touchstart mousedown", (e) => {
+        expand_catagory(e);
+        e.preventDefault();
+    })
 })
 
 function update_order_counter(){
@@ -64,7 +67,7 @@ function update_order_counter(){
 
 function add_item(e){
     let item = items[e.target.id];
-    let subs = e.path[1].querySelectorAll("input");
+    let subs = e.originalEvent.path[1].querySelectorAll("input");
 
     if (item.in_cart){
         item.in_cart = false;
@@ -103,10 +106,16 @@ function update_types(e){
 
 function update_event_listener(){
     document.querySelectorAll(".menu-item-btn").forEach(e => {
-        e.addEventListener("mousedown", add_item);
+        $(e).on("touchstart mousedown", (e) => {
+            add_item(e);
+            e.preventDefault();
+        })
     })
     document.querySelectorAll("input[type=checkbox]").forEach(e => {
-        e.addEventListener("change", update_types);
+        $(e).on("touchstart mousedown", (e) => {
+            update_types(e);
+            e.preventDefault();
+        })
     })
 }
 
