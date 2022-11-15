@@ -11,10 +11,11 @@ function price(item){
 function order_HTML(item){
      
     let _price = price(item);
+    items[item].types = [...new Set(items[item].types)]
 
     let out = "";
     if (items[item].types.length > 0)
-        new Set(items[item].types).forEach(type => {
+        items[item].types.forEach(type => {
 
             out += `
             <div class="order">
@@ -23,7 +24,7 @@ function order_HTML(item){
                     <p>kr ${_price}</p>
                     <div class="order-vars">
                         <input class="order-amount" id="${item}" type="number" name="porsjoner" min="1" step="1" value="2">
-                        <div class="remove-order" id="${item}"></div>
+                        <div class="remove-order" id="${item};${type}"></div>
                     </div>
                 </div>
             </div>` 
@@ -45,6 +46,8 @@ function order_HTML(item){
 
     return out;
 }
+
+console.log(items);
 
 let total_price = 0;
 function update_price(){
@@ -79,8 +82,15 @@ function set_all_counters(){
 }
 
 function remove_item(e){
-    let item = e.target.id;
-    items[item].in_cart = false;
+    let id = e.target.id.split(";");
+    let item = items[id[0]];
+
+    if (id[1] != undefined)
+        item.types.splice(item.types.indexOf(id[1]), 1)
+
+    if (item.types.length == 0)
+        item.in_cart = false;
+
     localStorage.setItem("items", JSON.stringify(items));
 
     e.originalEvent.path[3].remove();

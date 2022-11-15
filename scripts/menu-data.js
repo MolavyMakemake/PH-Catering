@@ -12,10 +12,10 @@ const menu_items =
     "Tofu Salat" : { "types" : [""], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk, koreander, peanøtter og tomater (Sterk om ønskelig)" },
     "Papaya Salat" : { "types" : [""], "ingredients" : "Chili hvitløk palmsokker lime og tomater (Sterk om ønskelig)" },
 
-    "Klassisk" : { "types" : [ "Biff", "Kylling", "Reker med cashewnøtter"], "ingredients" : "Paprika, østersaus og chili" },
-    "Pepper" : { "types" : ["Biff", "Kylling"], "ingredients" : "Grønnsaker, hvitløk, svart pepper, soya og østersaus" },
-    "Sterk" : { "types" : ["Biff", "Kylling", "Reker"], "ingredients" : "Hvitløk chili bambus skudd og basilikum (sterk)" },
-    "Strimlet" : { "types" : ["Kylling", "Reker"], "ingredients" : "Ananas augurk løk og tomater" },
+    "Wok" : { "types" : [ "Biff", "Kylling", "Reker og cashewnøtter"], "ingredients" : "Paprika, østersaus og chili" },
+    "Wok Pepper" : { "types" : ["Biff", "Kylling"], "ingredients" : "Grønnsaker, hvitløk, svart pepper, soya og østersaus" },
+    "Wok Sterk" : { "types" : ["Biff", "Kylling", "Reker"], "ingredients" : "Hvitløk chili bambus skudd og basilikum (sterk)" },
+    "Wok Strimlet" : { "types" : ["Kylling", "Reker"], "ingredients" : "Ananas augurk løk og tomater" },
     "Wok Rød Karri" : { "types" : ["Kylling", "Svinekjøtt", "Reker"], "ingredients" : "Bønnestengler, chili hvitløk basilikum (sterk)" },
     "Stekt ris" : { "types" : ["Kylling", "Reker"], "ingredients" : "Ris egg gulerøtter tomater lime, chili og fiskesaus" },
 
@@ -35,7 +35,7 @@ const menu_catagories =
     { "name" : "Karri", "image" : "curry.jpg", "items" : ["Rød Karri", "Gul Karri", "Phaneng", "Grønn Karri"] },
     { "name" : "Supper", "image" : "soup.jpg", "items" : ["Tom Kha Gai", "Tom Yam Kung"] },
     { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat"] },
-    { "name" : "Wok", "image" : "wok.jpg", "items" : ["Klassisk", "Pepper", "Sterk", "Strimlet", "Wok Rød Karri", "Stekt ris"] },
+    { "name" : "Wok", "image" : "wok.jpg", "items" : ["Wok", "Wok Pepper", "Wok Sterk", "Wok Strimlet", "Wok Rød Karri", "Stekt ris"] },
     { "name" : "Nudler", "image" : "nudles.jpg", "items" : ["Pad Thai", "Egg nudler", "Risnudler", "Store Risnudler"] },
     { "name" : "Grill", "image" : "grill.jpg", "items" : ["Kylling spyd", "Svinekjøtt spyd", "Vårruller med kylling", "Vårruller med reker"] }
 ]
@@ -116,7 +116,10 @@ function opened_inner_HTML(i){
         </h5>
     </div>
     <div class="catagory-items">
-        <div class="menu-items">${items_HTML}</div>
+        <div class="menu-items">
+            <div class="fading-edge"></div>
+            ${items_HTML}
+        </div>
         <div class="menu-item">${item_HTML(catagory.items[0])}</div>
     </div>
     <div class="cross" onclick="close_opened_catagory()"></div>

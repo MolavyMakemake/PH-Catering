@@ -60,7 +60,7 @@ function update_order_counter(){
             sum++;
         
 
-    e.parentElement.style.visibility = items.length == 0 ? "hidden" : "visible";
+    e.parentElement.style.visibility = sum == 0 ? "hidden" : "visible";
     e.innerHTML = sum;
 }
 
@@ -94,12 +94,15 @@ function add_item(e){
 
 function update_types(e){
     let item = items[document.querySelector(".menu-item-btn").id];
+    let target = e.originalEvent.path[1].querySelector("input");
 
-    if (e.target.checked){
-        item.types.push(e.target.id);
+    console.log(item);
+
+    if (!target.checked){
+        item.types.push(target.id);
     }
     else
-        item.types.splice(item.types.indexOf(e.target.id), 1);
+        item.types.splice(item.types.indexOf(target.id), 1);
     
     localStorage.setItem("items", JSON.stringify(items))
 }
@@ -111,10 +114,10 @@ function update_event_listener(){
             e.preventDefault();
         })
     })
-    document.querySelectorAll("input[type=checkbox]").forEach(e => {
+    document.querySelectorAll(".menu-item-sub").forEach(e => {
         $(e).on("touchstart mousedown", (e) => {
-            update_types(e);
             e.preventDefault();
+            update_types(e);
         })
     })
 }
