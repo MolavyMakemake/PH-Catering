@@ -66,6 +66,8 @@ function update_order_counter(){
 
 
 function add_item(e){
+    console.log(e);
+
     let item = items[e.target.id];
     let subs = e.originalEvent.path[1].querySelectorAll("input");
 
@@ -96,8 +98,6 @@ function update_types(e){
     let item = items[document.querySelector(".menu-item-btn").id];
     let target = e.originalEvent.path[1].querySelector("input");
 
-    console.log(item);
-
     if (!target.checked){
         item.types.push(target.id);
     }
@@ -115,7 +115,7 @@ function update_event_listener(){
         })
     })
     document.querySelectorAll(".menu-item-sub").forEach(e => {
-        $(e).on("touchstart mousedown", (e) => {
+        e.on("touchstart mousedown", (e) => {
             e.preventDefault();
             update_types(e);
         })
