@@ -97,7 +97,6 @@ function update_types(e){
     let item = items[document.querySelector(".menu-item-btn").id];
     let target = e.currentTarget.querySelector("input");
 
-
     if (!target.checked){
         item.types.push(target.id);
     }
@@ -115,9 +114,16 @@ function update_event_listener(){
         })
     })
     document.querySelectorAll(".menu-item-sub").forEach(e => {
-        $(e).on("touchstart mousedown", (e) => {
-            e.preventDefault();
+        $(e).on("touchstart", (e) => {
             update_types(e);
+            
+            let target = e.currentTarget.querySelector("input");
+            target.checked = !target.checked;
+            e.preventDefault();
+        })
+        $(e).on("mousedown", (e) => {
+            update_types(e);
+            e.preventDefault();
         })
     })
 }

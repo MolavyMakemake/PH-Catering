@@ -20,18 +20,14 @@
 }
 
 .fading-edge{
-    
-width: 15%;
-    
-right: 5%;
-    
-height: 50px;
-    
-background-image: linear-gradient(to right,transparent,#f1f1f1);
-    
-position: absolute;
-    
-pointer-events: none;
+    width: 15%;
+    right: 5%;
+    height: 50px;
+    background-image: -webkit-linear-gradient(to right,transparent,#f1f1f1);
+    background-image: -moz-linear-gradient(to right,transparent,#f1f1f1);
+    background-image: linear-gradient(to right,transparent,#f1f1f1);
+    position: absolute;
+    pointer-events: none;
 }
 
 .menu-catagory:hover{
