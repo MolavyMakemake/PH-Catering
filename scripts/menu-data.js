@@ -41,7 +41,7 @@ const menu_catagories =
 ]
 
 function retrieve_cookies(){
-    items = JSON.parse(localStorage.getItem("items"));
+    items = JSON.parse(sessionStorage.getItem("items"));
     isValid = items != null
     if (isValid)
         for (item in menu_items)

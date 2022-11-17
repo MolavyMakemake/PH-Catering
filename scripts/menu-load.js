@@ -89,7 +89,7 @@ function add_item(e){
         }
     }
 
-    localStorage.setItem("items", JSON.stringify(items))
+    sessionStorage.setItem("items", JSON.stringify(items))
     update_order_counter();
 }
 
@@ -103,7 +103,7 @@ function update_types(e){
     else
         item.types.splice(item.types.indexOf(target.id), 1);
     
-    localStorage.setItem("items", JSON.stringify(items))
+    sessionStorage.setItem("items", JSON.stringify(items))
 }
 
 function update_event_listener(){

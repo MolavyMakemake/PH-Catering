@@ -94,7 +94,7 @@ function remove_item(e){
     if (item.types.length == 0)
         item.in_cart = false;
 
-    localStorage.setItem("items", JSON.stringify(items));
+    sessionStorage.setItem("items", JSON.stringify(items));
 
 
     e.target.parentNode.parentNode.parentNode.remove();
