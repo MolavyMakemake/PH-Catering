@@ -14,7 +14,7 @@ body{
 
 .header{height: 100px;width: 100%;display: flex;align-items: center;flex-direction: row-reverse;overflow: hidden;}
 
-.header-title{cursor: pointer;margin-right: 15px;white-space: nowrap;position: absolute;}
+.header-title{cursor: pointer;white-space: nowrap;position: absolute;right: 15px;}
 
 .header-links{
     visibility: hidden;

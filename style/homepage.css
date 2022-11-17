@@ -26,12 +26,9 @@
 }
 
 .swiper{
-
-width: 100%;
-
-max-height: 80vh;
-
-margin-top: 50px;
+width: 100%;
+max-height: 80vh;
+margin-top: 50px;
 }
 
 .swiper-slide{display: flex;flex-direction: column;justify-content: center;
@@ -40,7 +37,6 @@ margin-top: 50px;
 
 .swiper-slide > h6{
     width: calc(100% - var(--swiper-navigation-size)/ 11 * 27);
-    margin-left: calc(var(--swiper-navigation-size)/ 22 * 27);
 }
 .experience-preview{
     overflow: hidden;

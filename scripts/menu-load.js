@@ -66,10 +66,9 @@ function update_order_counter(){
 
 
 function add_item(e){
-    console.log(e);
-
     let item = items[e.target.id];
-    let subs = e.originalEvent.path[1].querySelectorAll("input");
+
+    let subs = document.querySelectorAll("input");
 
     if (item.in_cart){
         item.in_cart = false;
@@ -96,7 +95,8 @@ function add_item(e){
 
 function update_types(e){
     let item = items[document.querySelector(".menu-item-btn").id];
-    let target = e.originalEvent.path[1].querySelector("input");
+    let target = e.currentTarget.querySelector("input");
+
 
     if (!target.checked){
         item.types.push(target.id);
@@ -115,7 +115,7 @@ function update_event_listener(){
         })
     })
     document.querySelectorAll(".menu-item-sub").forEach(e => {
-        e.on("touchstart mousedown", (e) => {
+        $(e).on("touchstart mousedown", (e) => {
             e.preventDefault();
             update_types(e);
         })

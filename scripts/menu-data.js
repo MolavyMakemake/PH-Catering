@@ -90,7 +90,7 @@ function item_HTML(item_key){
     </div>
     <div class="menu-item-subs">
         ${btn_html}
-        <div>${types}</div>
+        <div class="menu-item-subs-con"><div>${types}</div></div>
     </div>
     `
 }
