@@ -93,7 +93,8 @@ function remove_item(e){
 
     localStorage.setItem("items", JSON.stringify(items));
 
-    e.originalEvent.path[3].remove();
+
+    e.target.parentNode.parentNode.parentNode.remove();
 
     update_price();
 }
