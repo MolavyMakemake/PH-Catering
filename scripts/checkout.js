@@ -85,6 +85,9 @@ function remove_item(e){
     let id = e.target.id.split(";");
     let item = items[id[0]];
 
+    if (!confirm("Fjern " + id.join(" med ").toLowerCase() + "?"))
+        return;
+
     if (id[1] != undefined)
         item.types.splice(item.types.indexOf(id[1]), 1)
 
