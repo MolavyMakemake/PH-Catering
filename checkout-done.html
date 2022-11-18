@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="style/text.css">
     <link rel="stylesheet" href="style/common.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./scripts/animations.js"></script>
+
     <title>Thai catering</title>
     <link rel="icon" href="images/icon.png">
 </head>
@@ -19,13 +22,19 @@
     <!--HEADER-->
     <div class="header">
         <a href="./index" class="header-title"><h1>PH Catering</h1></a>
-        <img class="header-tab" id="expand-header" src="./images/extend.png" onclick="expand_header()"></img>
-        <img class="header-tab" id="retract-header" src="./images/return.png" onclick="retract_header()" style="visibility: hidden;"></img>
-        <div class="header-links">
-            <a href="./">Hjem</a>
-            <a href="./om-oss">Om oss</a>
+        <div class="header-links" style="visibility: hidden; opacity: 0">
+            <ul>
+                <li><a class="tab-link" href="./">Hjem</a></li>
+                <li><a class="tab-link" href="./om-oss">Om oss</a></li>
+            </ul>
+
+            <p>
+                kesinee81@outlook.com
+            </p>
         </div>
+        <img class="header-tab" id="expand-tab" src="./images/extend.png" onclick="toggle_tab()"></img>
     </div>
+    <!---->
     <!---->
 
     <div class="form-container">

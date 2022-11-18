@@ -38,7 +38,7 @@
 .form-container{
     width: 100%;
     display: flex;
-    margin-top: min(100px, 5vw);
+    margin-top: 150px;
     flex-direction: row;
     position: relative;
     flex-wrap: wrap;
