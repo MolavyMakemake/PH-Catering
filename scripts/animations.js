@@ -3,15 +3,28 @@ function animate_order_btn(){
     setTimeout(() => document.querySelector(".order-btn").style.scale = 1, 200)
 }
 
-function expand_header(){
-    document.querySelector(".header-title").style.visibility = "hidden";
-    document.querySelector("#expand-header").style.visibility = "hidden";
-    document.querySelector(".header-links").style.visibility = "visible";
-    document.querySelector("#retract-header").style.visibility = "visible";
+function toggle_tab(){
+    let hl = document.querySelector(".header-links");
+    let hidden = hl.style.visibility == "hidden";
+
+    if (hidden){
+        hl.style.visibility = "visible";
+        $(hl).animate({
+            opacity: "1"
+        }, 300)
+    }
+    else{
+        $(hl).animate({
+            opacity: "0"
+        }, 300, () => {
+            hl.style.visibility = "hidden";
+        })
+    }
 }
-function retract_header(){
-    document.querySelector(".header-title").style.visibility = "visible";
-    document.querySelector("#expand-header").style.visibility = "visible";
-    document.querySelector(".header-links").style.visibility = "hidden";
-    document.querySelector("#retract-header").style.visibility = "hidden";
+
+function scroll_to(query){
+    document.querySelector(query).scrollIntoView({
+        behavior: 'smooth',
+        block: "start"
+    });
 }

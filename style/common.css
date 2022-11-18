@@ -12,25 +12,35 @@ body{
     background-color: var(--foreground-color);
 }
 
-.header{height: 100px;width: 100%;display: flex;align-items: center;flex-direction: row-reverse;overflow: hidden;}
+.header{width: 100%;height: 80px;display: flex;align-items: center;flex-direction: row-reverse;overflow: hidden;margin-top: 5px;margin-bottom: 5px;display: flex;}
 
-.header-title{cursor: pointer;white-space: nowrap;position: absolute;right: 15px;}
+.header-title{cursor: pointer;white-space: nowrap;margin-right: 20px;}
 
 .header-links{
-    visibility: hidden;
-    flex-grow: 1;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    color: var(--text-black);
+    background-color: #ebebeb;
     display: flex;
-    justify-content: center;
-    margin-left: 64px;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.header-links > a{font-size: 1.4em;margin: 15px;margin-top: 5px;margin-bottom: 0;}
+.tab-link{font-size: 1.1em;margin: 5px;cursor: pointer;}
 
-.header-links > a:hover{
+.header-links > p{
+    margin-bottom: 8px;
+    margin-left: 23px;
+    margin-right: 50px;
+}
+
+.tab-link:hover{
     text-decoration: underline;
 }
 
+.header-tab:hover{
+    background-color: white;
+}
 
 .footer{
     margin-top: 100px;
@@ -92,16 +102,17 @@ background-color: white;
     height: 35px;
     position: absolute;
     left: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 @media only screen and (min-width: 800px){
     .header-links{
-        visibility: visible!important;
-        margin-right: max(calc(1050px - 100%), 25px);
+    min-width: 300px;
     }
     
     .header-tab{
-        visibility: hidden!important;
     }
 
     .header-title{

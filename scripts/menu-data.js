@@ -32,12 +32,27 @@ const menu_items =
 
 const menu_catagories = 
 [
-    { "name" : "Karri", "image" : "curry.jpg", "items" : ["Rød Karri", "Gul Karri", "Phaneng", "Grønn Karri"] },
-    { "name" : "Supper", "image" : "soup.jpg", "items" : ["Tom Kha Gai", "Tom Yam Kung"] },
-    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat"] },
-    { "name" : "Wok", "image" : "wok.jpg", "items" : ["Wok", "Wok Pepper", "Wok Sterk", "Wok Strimlet", "Wok Rød Karri", "Stekt ris"] },
-    { "name" : "Nudler", "image" : "nudles.jpg", "items" : ["Pad Thai", "Egg nudler", "Risnudler", "Store Risnudler"] },
-    { "name" : "Grill", "image" : "grill.jpg", "items" : ["Kylling spyd", "Svinekjøtt spyd", "Vårruller med kylling", "Vårruller med reker"] }
+    { "name" : "Karri", "image" : "curry.jpg", "items" : ["Rød Karri", "Gul Karri", "Phaneng", "Grønn Karri"], 
+        "description" : "Thai karri skiller seg ut ved sin unike blanding av urter og kryddre. Det er lite som slår god karri med ferske grønnsaker." },
+
+    { "name" : "Supper", "image" : "soup.jpg", "items" : ["Tom Kha Gai", "Tom Yam Kung"], 
+        "description" : "Thai supper er utrolig unike og smakfulle. Tom kha gai er Thailands nasjonalrett." },
+
+
+    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat"], 
+        "description" : "Thai salater er ikke som vanlige salater i deres unike blandinger ingredienser. Parret med litt ekstra kick fra chilli blir det utrolig godt. " + 
+        "Den mest populære salat-retten i thailand er uten tvil papaya salat." },
+
+
+    { "name" : "Wok", "image" : "wok.jpg", "items" : ["Wok", "Wok Pepper", "Wok Sterk", "Wok Strimlet", "Wok Rød Karri", "Stekt ris"],
+       "description" : "Wok har en karakteristisk smak som kommer fra at den er stekt under høy varme. Så kalt \"stir frying\" er en viktig del av thai matlagning." },
+
+    { "name" : "Nudler", "image" : "nudles.jpg", "items" : ["Pad Thai", "Egg nudler", "Risnudler", "Store Risnudler"], 
+        "description" : "Nudler har vært en del av matkulturen i Thailand i århundre. Blant dem er Pad Thai den mest kjente. " +
+        "Risnudler stekes i en wok med peanøtter, egg og den ikonske tamarind sausen." },
+
+    { "name" : "Grill", "image" : "grill.jpg", "items" : ["Kylling spyd", "Svinekjøtt spyd", "Vårruller med kylling", "Vårruller med reker"],
+        "description" : "Med nydelige sauser og marinader er grillmat et populært valg." }
 ]
 
 function retrieve_cookies(){
@@ -111,12 +126,13 @@ function opened_inner_HTML(i){
     <div class="catagory-info">
         <h2>${catagory.name}</h2>
         <h5>
-            An ingredient found in many Thai dishes and used in every region of the country is nam pla, a clear fish sauce that is very aromatic. 
-            Fish sauce is a staple ingredient in Thai cuisine.
+            ${catagory.description}
         </h5>
     </div>
     <div class="catagory-items">
         <div class="menu-items">
+            <div class="scroll-edge se-left"></div>
+            <div class="scroll-edge"></div>
             <div class="fading-edge"></div>
             ${items_HTML}
         </div>
