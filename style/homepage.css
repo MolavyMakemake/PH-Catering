@@ -1,5 +1,6 @@
 .banner{
     width: 100%;
+    max-height: calc(100vh - 100px);
     height: 600px;
     background-image: url("../images/banner.jpg");
     background-size: cover;
