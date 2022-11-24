@@ -92,14 +92,15 @@ function add_item(e){
 
 function update_types(e){
     let item = items[document.querySelector(".menu-item-btn").id];
-    let target = e.currentTarget.querySelector("input");
+    let target = e.target;
 
-    if (!target.checked){
+    if (target.checked){
         item.types.push(target.id);
     }
     else
         item.types.splice(item.types.indexOf(target.id), 1);
     
+    console.log(item);
     sessionStorage.setItem("items", JSON.stringify(items))
 }
 
@@ -107,8 +108,8 @@ function update_event_listener(){
     document.querySelectorAll(".menu-item-btn").forEach(e => {
         $(e).on("click", add_item)
     })
-    document.querySelectorAll(".menu-item-sub").forEach(e => {
-        $(e).on("click", update_types)
+    document.querySelectorAll("input").forEach(e => {
+        $(e).on("change", update_types)
     })
 }
 
