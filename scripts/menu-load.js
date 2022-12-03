@@ -79,7 +79,7 @@ function add_item(e){
         e.target.className = "menu-item-btn remove-item";
         let checked = false;
         subs.forEach(sub => checked |= sub.checked);
-        if (!checked)
+        if (subs.length > 0 && !checked)
         {
             subs[0].checked = true;
             item.types.push(subs[0].id)
