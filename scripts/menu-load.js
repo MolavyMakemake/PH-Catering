@@ -5,7 +5,7 @@ let closed_catagory = null;
 let closed_catagory_index = null;
 
 function create_menu(){
-    let content = "";
+    let content = menu.querySelector(".menu-header").outerHTML;
     
     for (let i = 0; i < menu_catagories.length; i++) 
         content += catagory_HTML(i)
@@ -15,7 +15,7 @@ function create_menu(){
 
 function close_opened_catagory(){
     opened_catagory.remove();
-    menu.insertBefore(closed_catagory, menu.children[closed_catagory_index]);
+    menu.insertBefore(closed_catagory, menu.children[closed_catagory_index + 1]);
 
     opened_catagory = null;
 }
@@ -31,7 +31,7 @@ function expand_catagory(e){
 
     closed_catagory = e.target;
     opened_catagory = opened_catagory_HTML(id);
-    menu.insertBefore(opened_catagory, menu.children[0]);
+    menu.insertBefore(opened_catagory, menu.children[1]);
     closed_catagory.remove();
 
     update_event_listener();
