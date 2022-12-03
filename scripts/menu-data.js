@@ -1,33 +1,32 @@
 const menu_items = 
 {
-    "Rød Karri" : { "types" : [ "Kylling", "And"], "ingredients" : "Gryte med kokosmelk, bambus skudd, basilikum og frisk frukt" },
-    "Gul Karri" : { "types" : ["Biff", "Kylling lår"], "ingredients" : "Gryte med massaman karri, kokosmelk, poteter gulerøtter og peanøtter" },
-    "Phaneng" : { "types" : ["Kylling", "Svinekjøtt"], "ingredients" : "Kokosmelk, limeblader og eggplanter" },
-    "Grønn Karri": { "types" : ["Kylling", "Reker"], "ingredients" : "Kokosmelk basilikum og bambus skudd" },
+    "Rød Karri" : { "types" : ["Vegeteriansk",  "Kylling", "And"], "ingredients" : "Gryte med kokosmelk, bambus skudd, basilikum og frisk frukt" },
+    "Gul Karri" : { "types" : ["Vegeteriansk", "Biff", "Kylling lår"], "ingredients" : "Gryte med massaman karri, kokosmelk, poteter gulerøtter og peanøtter" },
+    "Phaneng" : { "types" : ["Vegeteriansk", "Kylling", "Svinekjøtt"], "ingredients" : "Kokosmelk, limeblader og eggplanter" },
+    "Grønn Karri": { "types" : ["Vegeteriansk", "Kylling", "Reker"], "ingredients" : "Kokosmelk basilikum og bambus skudd" },
 
-    "Tom Kha Gai" : { "types" : ["Kylling", "Reker"], "ingredients" : "Sitrongress, kokosmelk, lime, tomater og koreander" },
-    "Tom Yam Kung" : { "types" : [""], "ingredients" : "Sitrongress, limeblader, galangal, melk og koreander" },
+    "Tom Kha Gai" : { "types" : ["Vegeteriansk", "Kylling", "Reker"], "ingredients" : "Sitrongress, kokosmelk, lime, tomater og koreander" },
+    "Tom Yam Kung" : { "types" : ["Vegeteriansk", ""], "ingredients" : "Sitrongress, limeblader, galangal, melk og koreander" },
 
-    "Salat" : { "types" : ["Biff", "Reker", "Svinekjøtt"], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk og koreander (Sterk om ønskelig)" },
-    "Tofu Salat" : { "types" : [""], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk, koreander, peanøtter og tomater (Sterk om ønskelig)" },
-    "Papaya Salat" : { "types" : [""], "ingredients" : "Chili hvitløk palmsokker lime og tomater (Sterk om ønskelig)" },
+    "Salat" : { "types" : ["Vegeteriansk", "Biff", "Reker", "Svinekjøtt"], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk og koreander (Sterk om ønskelig)" },
+    "Tofu Salat" : { "types" : ["Vegeteriansk", ""], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk, koreander, peanøtter og tomater (Sterk om ønskelig)" },
+    "Papaya Salat" : { "types" : ["Vegeteriansk", ""], "ingredients" : "Chili hvitløk palmsokker lime og tomater (Sterk om ønskelig)" },
 
-    "Wok" : { "types" : [ "Biff", "Kylling", "Reker og cashewnøtter"], "ingredients" : "Paprika, østersaus og chili" },
-    "Wok Pepper" : { "types" : ["Biff", "Kylling"], "ingredients" : "Grønnsaker, hvitløk, svart pepper, soya og østersaus" },
-    "Wok Sterk" : { "types" : ["Biff", "Kylling", "Reker"], "ingredients" : "Hvitløk chili bambus skudd og basilikum (sterk)" },
-    "Wok Strimlet" : { "types" : ["Kylling", "Reker"], "ingredients" : "Ananas augurk løk og tomater" },
-    "Wok Rød Karri" : { "types" : ["Kylling", "Svinekjøtt", "Reker"], "ingredients" : "Bønnestengler, chili hvitløk basilikum (sterk)" },
-    "Stekt ris" : { "types" : ["Kylling", "Reker"], "ingredients" : "Ris egg gulerøtter tomater lime, chili og fiskesaus" },
+    "Wok" : { "types" : ["Vegeteriansk",  "Biff", "Kylling", "Reker og cashewnøtter"], "ingredients" : "Paprika, østersaus og chili" },
+    "Wok Pepper" : { "types" : ["Vegeteriansk", "Biff", "Kylling"], "ingredients" : "Grønnsaker, hvitløk, svart pepper, soya og østersaus" },
+    "Wok Sterk" : { "types" : ["Vegeteriansk", "Biff", "Kylling", "Reker"], "ingredients" : "Hvitløk chili bambus skudd og basilikum (sterk)" },
+    "Wok Strimlet" : { "types" : ["Vegeteriansk", "Kylling", "Reker"], "ingredients" : "Ananas augurk løk og tomater" },
+    "Wok Rød Karri" : { "types" : ["Vegeteriansk", "Kylling", "Svinekjøtt", "Reker"], "ingredients" : "Bønnestengler, chili hvitløk basilikum (sterk)" },
+    "Stekt ris" : { "types" : ["Vegeteriansk", "Kylling", "Reker"], "ingredients" : "Ris egg gulerøtter tomater lime, chili og fiskesaus" },
 
-    "Pad Thai" : { "types" : ["Kylling", "Reker"], "ingredients" : "Risnudler egg, tamarind saus soya peanøtter og chili" },
-    "Egg nudler" : { "types" : ["Kylling", "Reker", "Tofu"], "ingredients" : "Eggnudler grønnsaker soya og østersaus" },
-    "Risnudler" : { "types" : ["Kylling", "Reker"], "ingredients" : "Risnudler med hvitløk chili og whisky (sterk)" },
-    "Store Risnudler" : { "types" : ["Kylling", "Svinekjøtt"], "ingredients" : "Brokkoli, svart soya og østers saus" },
+    "Pad Thai" : { "types" : ["Vegeteriansk", "Kylling", "Reker"], "ingredients" : "Risnudler egg, tamarind saus soya peanøtter og chili" },
+    "Egg nudler" : { "types" : ["Vegeteriansk", "Kylling", "Reker", "Tofu"], "ingredients" : "Eggnudler grønnsaker soya og østersaus" },
+    "Risnudler" : { "types" : ["Vegeteriansk", "Kylling", "Reker"], "ingredients" : "Risnudler med hvitløk chili og whisky (sterk)" },
+    "Store Risnudler" : { "types" : ["Vegeteriansk", "Kylling", "Svinekjøtt"], "ingredients" : "Brokkoli, svart soya og østers saus" },
 
-    "Kylling spyd" : { "types" : [""], "ingredients" : "Serveres med peanøttsaus" },
-    "Svinekjøtt spyd" : { "types" : [""], "ingredients" : "Serveres med peanøttsaus" },
-    "Vårruller med kylling" : { "types" : [""], "ingredients" : "Serveres med søt chilisaus" },
-    "Vårruller med reker" : { "types" : [""], "ingredients" : "Serveres med søt chilisaus" },
+    "Kylling spyd" : { "types" : ["Vegeteriansk", "Kylling"], "ingredients" : "Serveres med peanøttsaus" },
+    "Svinekjøtt spyd" : { "types" : ["Vegeteriansk", "Svinekjøtt"], "ingredients" : "Serveres med peanøttsaus" },
+    "Vårruller" : { "types" : ["Vegeteriansk", "Kylling", "Reker"], "ingredients" : "Serveres med søt chilisaus" }
 }
 
 const menu_catagories = 

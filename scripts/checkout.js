@@ -19,7 +19,7 @@ function order_HTML(item){
 
             out += `
             <div class="order">
-                <p class="order-item">${item} med ${type.toLowerCase()}</p>
+                <p class="order-item">${item} ${type == "Vegeteriansk" ? ", " : "med"} ${type.toLowerCase()}</p>
                 <div class="order-info">
                     <p>kr ${_price}</p>
                     <div class="order-vars">
@@ -85,7 +85,9 @@ function remove_item(e){
     let id = e.target.id.split(";");
     let item = items[id[0]];
 
-    if (!confirm("Fjern " + id.join(" med ").toLowerCase() + "?"))
+    console.log(id[1]);
+
+    if (!confirm("Fjern " + id.join(id[1] == "Vegeteriansk" ? ", " : " med ").toLowerCase() + "?"))
         return;
 
     if (id[1] != undefined)
