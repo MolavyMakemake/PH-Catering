@@ -55,7 +55,7 @@ function update_price(){
     document.querySelectorAll(".order-amount").forEach(e => {
         total_price += Number(e.value) * price(e.id);
     })
-    document.querySelector("#order-total").innerHTML = "kr " + total_price + "*";
+    document.querySelector("#order-total").innerHTML = "kr " + total_price;
 }
 
 let content = ""
