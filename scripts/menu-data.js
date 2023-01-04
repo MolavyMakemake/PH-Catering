@@ -11,6 +11,9 @@ const menu_items =
     "Salat" : { "types" : ["Biff", "Reker", "Svinekjøtt", "Vegeteriansk"], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk og koreander (Sterk om ønskelig)" },
     "Tofu Salat" : { "types" : [""], "ingredients" : "Glassnudler, rødløk, lime, chili, hvitløk, koreander, peanøtter og tomater (Sterk om ønskelig)" },
     "Papaya Salat" : { "types" : [""], "ingredients" : "Chili hvitløk palmsokker lime og tomater (Sterk om ønskelig)" },
+    "Skaldyr Salat" : { "types" : [""], "ingredients" : "Spesiel thai dressing, inneholder lime, chili, hvitløk, fiskesaus og grønnsaker" },
+    "Tunfisk Salat" : { "types" : [""], "ingredients" : "Tunfisk blandet med bønner og quinoe rød/hvit blandet med hjemmelaget dressing" },
+    "Grillet tofu Salat" : { "types" : [""], "ingredients" : "Grillet tofu med chili, lime, grønnsaker og fiske" },
 
     "Wok" : { "types" : [ "Biff", "Kylling", "Reker og cashewnøtter", "Vegeteriansk"], "ingredients" : "Paprika, østersaus og chili" },
     "Wok Pepper" : { "types" : ["Biff", "Kylling", "Vegeteriansk"], "ingredients" : "Grønnsaker, hvitløk, svart pepper, soya og østersaus" },
@@ -20,13 +23,17 @@ const menu_items =
     "Stekt ris" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Ris egg gulerøtter tomater lime, chili og fiskesaus" },
 
     "Pad Thai" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Risnudler egg, tamarind saus soya peanøtter og chili" },
-    "Egg nudler" : { "types" : ["Kylling", "Reker", "Tofu", "Vegeteriansk"], "ingredients" : "Eggnudler grønnsaker soya og østersaus" },
+    "Eggnudler" : { "types" : ["Kylling", "Reker", "Tofu", "Vegeteriansk"], "ingredients" : "Eggnudler grønnsaker soya og østersaus" },
     "Risnudler" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Risnudler med hvitløk chili og whisky (sterk)" },
     "Store Risnudler" : { "types" : ["Kylling", "Svinekjøtt", "Vegeteriansk"], "ingredients" : "Brokkoli, svart soya og østers saus" },
 
     "Kylling spyd" : { "types" : ["Kylling", "Vegeteriansk"], "ingredients" : "Serveres med peanøttsaus" },
     "Svinekjøtt spyd" : { "types" : ["Svinekjøtt", "Vegeteriansk"], "ingredients" : "Serveres med peanøttsaus" },
-    "Vårruller" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Serveres med søt chilisaus" }
+    "Vårruller" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Serveres med søt chilisaus" },
+
+    "Eggnudel Suppe" : { "types" : ["Kylling", "Bigg", "Reker", "Tofu (Vegetariansk)", "Vegeteriansk"], "ingredients" : "" },
+    "Risnudel Suppe" : { "types" : ["Kylling", "Bigg", "Reker", "Tofu (Vegetariansk)", "Vegeteriansk"], "ingredients" : "" },
+    "Glassnudel Suppe" : { "types" : ["Kylling", "Bigg", "Reker", "Tofu (Vegetariansk)", "Vegeteriansk"], "ingredients" : "" },
 }
 
 const menu_catagories = 
@@ -37,21 +44,22 @@ const menu_catagories =
     { "name" : "Supper", "image" : "soup.jpg", "items" : ["Tom Kha Gai", "Tom Yam Kung"], 
         "description" : "Thai supper er utrolig unike og smakfulle. Tom kha gai er Thailands nasjonalrett." },
 
-
-    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat"], 
+    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat", "Skaldyr Salat", "Grillet tofu Salat", "Tunfisk Salat"], 
         "description" : "Thai salater er ikke som vanlige salater i deres unike blandinger ingredienser. Parret med litt ekstra kick fra chilli blir det utrolig godt. " + 
         "Den mest populære salat-retten i thailand er uten tvil papaya salat." },
-
 
     { "name" : "Wok", "image" : "wok.jpg", "items" : ["Wok", "Wok Pepper", "Wok Sterk", "Wok Strimlet", "Wok Rød Karri", "Stekt ris"],
        "description" : "Wok har en karakteristisk smak som kommer fra at den er stekt under høy varme. Så kalt \"stir frying\" er en viktig del av thai matlagning." },
 
-    { "name" : "Nudler", "image" : "nudles.jpg", "items" : ["Pad Thai", "Egg nudler", "Risnudler", "Store Risnudler"], 
+    { "name" : "Nudler", "image" : "nudles.jpg", "items" : ["Pad Thai", "Eggnudler", "Risnudler", "Store Risnudler"], 
         "description" : "Nudler har vært en del av matkulturen i Thailand i århundre. Blant dem er Pad Thai den mest kjente. " +
         "Risnudler stekes i en wok med peanøtter, egg og den ikonske tamarind sausen." },
 
-    { "name" : "Grill", "image" : "grill.jpg", "items" : ["Kylling spyd", "Svinekjøtt spyd", "Vårruller med kylling", "Vårruller med reker"],
-        "description" : "Med nydelige sauser og marinader er grillmat et populært valg." }
+    { "name" : "Grill", "image" : "grill.jpg", "items" : ["Kylling spyd", "Svinekjøtt spyd", "Vårruller"],
+        "description" : "Med nydelige sauser og marinader er grillmat et populært valg." },
+
+    { "name" : "Nudelsuppe", "image" : "noodlesoup.jpg", "items" : ["Eggnudel Suppe", "Risnudel Suppe", "Glassnudel Suppe"],
+        "description" : "Nudel suppene utmerker seg med ferske grønnsaker og hjemmelaget buljong" },
 ]
 
 function retrieve_cookies(){
