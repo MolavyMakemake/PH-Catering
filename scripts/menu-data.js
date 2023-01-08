@@ -14,6 +14,7 @@ const menu_items =
     "Skaldyr Salat" : { "types" : [""], "ingredients" : "Spesiel thai dressing, inneholder lime, chili, hvitløk, fiskesaus og grønnsaker" },
     "Tunfisk Salat" : { "types" : [""], "ingredients" : "Tunfisk blandet med bønner og quinoe rød/hvit blandet med hjemmelaget dressing" },
     "Grillet tofu Salat" : { "types" : [""], "ingredients" : "Grillet tofu med chili, lime, grønnsaker og fiske" },
+    "Reke Salat" : { "types" : [""], "ingredients" : "Chili, vitløk, rødløk, koriander. Serveres med hjemmelaget plommesaus" },
 
     "Wok" : { "types" : [ "Biff", "Kylling", "Reker og cashewnøtter", "Vegeteriansk"], "ingredients" : "Paprika, østersaus og chili" },
     "Wok Pepper" : { "types" : ["Biff", "Kylling", "Vegeteriansk"], "ingredients" : "Grønnsaker, hvitløk, svart pepper, soya og østersaus" },
@@ -27,9 +28,10 @@ const menu_items =
     "Risnudler" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Risnudler med hvitløk chili og whisky (sterk)" },
     "Store Risnudler" : { "types" : ["Kylling", "Svinekjøtt", "Vegeteriansk"], "ingredients" : "Brokkoli, svart soya og østers saus" },
 
-    "Kylling spyd" : { "types" : ["Kylling", "Vegeteriansk"], "ingredients" : "Serveres med peanøttsaus" },
-    "Svinekjøtt spyd" : { "types" : ["Svinekjøtt", "Vegeteriansk"], "ingredients" : "Serveres med peanøttsaus" },
+    "Grill Spyd (Satay)" : { "types" : ["Kylling", "Svinekjøtt", "Vegeteriansk"], "ingredients" : "Serveres med peanøttsaus" },
+    "Grill Spyd" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Gurkemeie, rød kurry, fiskesaus, tamarind. Serveres med jordnøtter" },
     "Vårruller" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Serveres med søt chilisaus" },
+    "Kjøttboller" : { "types" : [""], "ingredients" : "Kjøtt, hvitpepper, soja, koriander, vitløk. Serveres med hjemmelaget plommesaus." },
 
     "Eggnudel Suppe" : { "types" : ["Kylling", "Bigg", "Reker", "Tofu (Vegetariansk)", "Vegeteriansk"], "ingredients" : "" },
     "Risnudel Suppe" : { "types" : ["Kylling", "Bigg", "Reker", "Tofu (Vegetariansk)", "Vegeteriansk"], "ingredients" : "" },
@@ -44,7 +46,7 @@ const menu_catagories =
     { "name" : "Supper", "image" : "soup.jpg", "items" : ["Tom Kha Gai", "Tom Yam Kung"], 
         "description" : "Thai supper er utrolig unike og smakfulle. Tom kha gai er Thailands nasjonalrett." },
 
-    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat", "Skaldyr Salat", "Grillet tofu Salat", "Tunfisk Salat"], 
+    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat", "Skaldyr Salat", "Grillet tofu Salat", "Tunfisk Salat", "Reke Salat"], 
         "description" : "Thai salater er ikke som vanlige salater i deres unike blandinger ingredienser. Parret med litt ekstra kick fra chilli blir det utrolig godt. " + 
         "Den mest populære salat-retten i thailand er uten tvil papaya salat." },
 
@@ -55,7 +57,7 @@ const menu_catagories =
         "description" : "Nudler har vært en del av matkulturen i Thailand i århundre. Blant dem er Pad Thai den mest kjente. " +
         "Risnudler stekes i en wok med peanøtter, egg og den ikonske tamarind sausen." },
 
-    { "name" : "Grill", "image" : "grill.jpg", "items" : ["Kylling spyd", "Svinekjøtt spyd", "Vårruller"],
+    { "name" : "Finger mat", "image" : "grill.jpg", "items" : ["Grill Spyd (Satay)", "Grill Spyd", "Vårruller", ],
         "description" : "Med nydelige sauser og marinader er grillmat et populært valg." },
 
     { "name" : "Nudelsuppe", "image" : "noodlesoup.jpg", "items" : ["Eggnudel Suppe", "Risnudel Suppe", "Glassnudel Suppe"],
