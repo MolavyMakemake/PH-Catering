@@ -32,7 +32,14 @@
 margin-top: 50px;
 }
 
-.swiper-slide{display: flex;flex-direction: column;justify-content: center;
+.swiper-slide{
+    display: flex;
+    width: 80%!important;
+    height: 70%!important;
+    margin: 10%;
+    margin-top: 20%;
+    flex-direction: column;
+    justify-content: center;
     justify-content: flex-start;
 }
 
@@ -92,6 +99,8 @@
     .experience-preview{
         width: 45% !important;
         height: 640px;
+        background-color: var(--foreground-color)!important;
+        border-style: none!important;
     }
     .banner{
         height: 700px;

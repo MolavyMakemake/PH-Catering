@@ -29,9 +29,14 @@ body{
 .tab-link{font-size: 1.1em;margin: 5px;cursor: pointer;}
 
 .header-links > p{
-    margin-bottom: 8px;
-    margin-left: 23px;
-    margin-right: 50px;
+    
+margin-bottom: 8px;
+    
+margin-left: 23px;
+    
+margin-right: 50px;
+    
+margin-top: 0;
 }
 
 .tab-link:hover{

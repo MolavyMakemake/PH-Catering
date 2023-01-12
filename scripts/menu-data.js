@@ -31,6 +31,7 @@ const menu_items =
     "Grill Spyd (Satay)" : { "types" : ["Kylling", "Svinekjøtt", "Vegeteriansk"], "ingredients" : "Serveres med peanøttsaus" },
     "Grill Spyd" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Gurkemeie, rød kurry, fiskesaus, tamarind. Serveres med jordnøtter" },
     "Vårruller" : { "types" : ["Kylling", "Reker", "Vegeteriansk"], "ingredients" : "Serveres med søt chilisaus" },
+    "Thai Vårruller" : { "types" : ["Kylling", "Vegeteriansk"], "ingredients" : "Serveres med sursøt saus" },
     "Kjøttboller" : { "types" : [""], "ingredients" : "Kjøtt, hvitpepper, soja, koriander, vitløk. Serveres med hjemmelaget plommesaus." },
 
     "Eggnudel Suppe" : { "types" : ["Kylling", "Bigg", "Reker", "Tofu (Vegetariansk)", "Vegeteriansk"], "ingredients" : "" },
@@ -46,22 +47,28 @@ const menu_catagories =
     { "name" : "Supper", "image" : "soup.jpg", "items" : ["Tom Kha Gai", "Tom Yam Kung"], 
         "description" : "Thai supper er utrolig unike og smakfulle. Tom kha gai er Thailands nasjonalrett." },
 
-    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat", "Skaldyr Salat", "Grillet tofu Salat", "Tunfisk Salat", "Reke Salat"], 
-        "description" : "Thai salater er ikke som vanlige salater i deres unike blandinger ingredienser. Parret med litt ekstra kick fra chilli blir det utrolig godt. " + 
+    { "name" : "Salater", "image" : "salad.jpg", "items" : ["Salat", "Tofu Salat", "Papaya Salat", "Reke Salat"], 
+        "description" : "Thai salater er ikke som vanlige salater i deres unike blandinger. Parret med litt ekstra kick fra chilli blir det utrolig godt." + 
         "Den mest populære salat-retten i thailand er uten tvil papaya salat." },
 
     { "name" : "Wok", "image" : "wok.jpg", "items" : ["Wok", "Wok Pepper", "Wok Sterk", "Wok Strimlet", "Wok Rød Karri", "Stekt ris"],
        "description" : "Wok har en karakteristisk smak som kommer fra at den er stekt under høy varme. Så kalt \"stir frying\" er en viktig del av thai matlagning." },
 
     { "name" : "Nudler", "image" : "nudles.jpg", "items" : ["Pad Thai", "Eggnudler", "Risnudler", "Store Risnudler"], 
-        "description" : "Nudler har vært en del av matkulturen i Thailand i århundre. Blant dem er Pad Thai den mest kjente. " +
+        "description" : "Nudler har vært en del av matkulturen i Thailand i århundre. Blant dem er Pad Thai den mest kjente." +
         "Risnudler stekes i en wok med peanøtter, egg og den ikonske tamarind sausen." },
 
-    { "name" : "Finger mat", "image" : "grill.jpg", "items" : ["Grill Spyd (Satay)", "Grill Spyd", "Vårruller", ],
+    { "name" : "Grill mat", "image" : "grill.jpg", "items" : ["Grill Spyd (Satay)", "Vårruller", ],
         "description" : "Med nydelige sauser og marinader er grillmat et populært valg." },
 
     { "name" : "Nudelsuppe", "image" : "noodlesoup.jpg", "items" : ["Eggnudel Suppe", "Risnudel Suppe", "Glassnudel Suppe"],
         "description" : "Nudel suppene utmerker seg med ferske grønnsaker og hjemmelaget buljong" },
+
+    { "name" : "Kald mat", "image" : "cold-dish.jpg", "items" : ["Skaldyr Salat", "Grillet tofu Salat", "Tunfisk Salat"],
+        "description" : "Veldige gode og enkle retter. Passer seg veldig til den balanserte sure, søte thai smaken." },
+
+    { "name" : "Finger mat", "image" : "finger-food.jpg", "items" : ["Grill Spyd", "Thai Vårruller"],
+        "description" : "Finger mat er utrolig populært i Thailand og for god grunn." },
 ]
 
 function retrieve_cookies(){
