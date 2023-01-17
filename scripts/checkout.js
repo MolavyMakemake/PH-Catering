@@ -1,3 +1,6 @@
+const PRICING_ENABLED = false;
+
+
 function price(item){
     if (menu_catagories[1].items.includes(item))
         return 100;
@@ -10,8 +13,11 @@ function price(item){
 
 function order_HTML(item){
      
-    let _price = price(item);
+    let _price = "";
     items[item].types = [...new Set(items[item].types)]
+
+    if (PRICING_ENABLED)
+        _price = "kr " + price(item);
 
     let out = "";
     if (items[item].types.length > 0)
@@ -21,7 +27,7 @@ function order_HTML(item){
             <div class="order">
                 <p class="order-item">${item} ${type == "Vegeteriansk" ? ", " : "med"} ${type.toLowerCase()}</p>
                 <div class="order-info">
-                    <p>kr ${_price}</p>
+                    <p>${_price}</p>
                     <div class="order-vars">
                         <input class="order-amount" id="${item}" type="number" name="porsjoner" min="1" step="1" value="2">
                         <div class="remove-order" id="${item};${type}"></div>
@@ -35,7 +41,7 @@ function order_HTML(item){
         <div class="order">
             <p class="order-item">${item}</p>
             <div class="order-info">
-                <p>kr ${_price}</p>
+                <p>${_price}</p>
                 <div class="order-vars">
                     <input class="order-amount" id="${item}" type="number" name="porsjoner" min="1" step="1" value="2">
                     <div class="remove-order" id="${item}"></div>
@@ -51,6 +57,10 @@ console.log(items);
 
 let total_price = 0;
 function update_price(){
+
+    if (!PRICING_ENABLED)
+        return;
+
     total_price = 0
     document.querySelectorAll(".order-amount").forEach(e => {
         total_price += Number(e.value) * price(e.id);
